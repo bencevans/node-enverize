@@ -1,0 +1,24 @@
+{
+  "name": "enverize",
+  "version": "0.0.0",
+  "description": "Swap in ENV in and out of Strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha test.js"
+  },
+  "repository": "",
+  "keywords": [
+    "env",
+    "string",
+    "swap",
+    "parse"
+  ],
+  "author": "Ben Evans <ben@bensbit.co.uk>",
+  "license": "BSD",
+  "dependencies": {
+    "underscore": "~1.4.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.6.0"
+  }
+}
