@@ -1,4 +1,3 @@
-var _ = require('underscore');
 
 module.exports = {};
 
@@ -11,13 +10,12 @@ module.exports.enverize = function (string) {
   var points = 0;
   var pointsKey = null;
 
-  _.each(this.env, function(value, key) {
-
-    if((string.length - string.replace(value, '').length) > points) {
-      points = (string.length - string.replace(value, '').length);
+  for(var key in this.env) {
+    if((string.length - string.replace(this.env[key], '').length) > points) {
+      points = (string.length - string.replace(this.env[key], '').length);
       pointsKey = key;
     }
-  });
+  }
 
   if(points > 0)
     string = string.replace(this.env[pointsKey], '$' + pointsKey);
@@ -28,8 +26,8 @@ module.exports.enverize = function (string) {
 
 
 module.exports.parse = function (string) {
-  _.each(this.env, function(value, key) {
-    string = string.replace('$' + key, value);
-  });
+  for(var key in this.env) {
+    string = string.replace('$' + key, this.env[key]);
+  }
   return string;
 };

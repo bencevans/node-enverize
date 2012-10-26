@@ -1,6 +1,6 @@
 {
   "name": "enverize",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Swap in ENV in and out of Strings",
   "main": "index.js",
   "scripts": {
@@ -15,9 +15,7 @@
   ],
   "author": "Ben Evans <ben@bensbit.co.uk>",
   "license": "BSD",
-  "dependencies": {
-    "underscore": "~1.4.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "~1.6.0"
   }
