@@ -8,11 +8,15 @@ Replace string contents with ENVIRONMENT Variables. I use for dotfiles manager s
 
 ###Usage
 
-.env = {} // Defaults to process.env
+```javascript
+var enverize = require('enverize');
 
-.enverize(aStringToEnverize) // Returns String with ${ENVKEY} for example '/home/bencevans' would become '$HOME'
+enverize.env = process.env // This is the default
 
-.parse(EnverizedString) // Swaps ENV Values back in.
+enverize.enverize(aStringToEnverize) // Returns String with ${ENVKEY} for example '/home/bencevans' would become '$HOME'
+
+enverize.parse(EnverizedString) // Swaps ENV Values back in.
+```
 
 ###Examples
 
